@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @extends('admin.layouts.app')
           <!-- Content wrapper -->
           @section('content')
@@ -80,10 +81,37 @@
                         </div>
                         <div class="pro-edit"><a data-bs-target="#profile_info" data-bs-toggle="modal" class="edit-icon" href="#"><i class="fa-solid fa-pencil"></i></a></div>
                     </div>
+=======
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+            {{ __('Profile') }}
+        </h2>
+    </x-slot>
+
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
+            <div class="p-4 sm:p-8 bg-white dark:bg-gray-800 shadow sm:rounded-lg">
+                <div class="max-w-xl">
+                    @include('profile.partials.update-profile-information-form')
+                </div>
+            </div>
+
+            <div class="p-4 sm:p-8 bg-white dark:bg-gray-800 shadow sm:rounded-lg">
+                <div class="max-w-xl">
+                    @include('profile.partials.update-password-form')
+                </div>
+            </div>
+
+            <div class="p-4 sm:p-8 bg-white dark:bg-gray-800 shadow sm:rounded-lg">
+                <div class="max-w-xl">
+                    @include('profile.partials.delete-user-form')
+>>>>>>> remoterepo/main
                 </div>
             </div>
         </div>
     </div>
+<<<<<<< HEAD
     <div class="card tab-box">
         <div class="row user-tabs">
             <div class="col-lg-12 col-md-12 col-sm-12 line-tabs">
@@ -1573,3 +1601,6 @@
 
 </div>
 @stop
+=======
+</x-app-layout>
+>>>>>>> remoterepo/main

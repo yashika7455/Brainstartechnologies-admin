@@ -2,16 +2,22 @@
 
 namespace App\Http\Controllers;
 
+<<<<<<< HEAD
 use App\Http\Requests\ProfileUpdateRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
+=======
+use App\Models\Project; // Add this line to import the Project model
+use Illuminate\Http\Request;
+>>>>>>> remoterepo/main
 use Illuminate\View\View;
 
 class ProfileController extends Controller
 {
     /**
+<<<<<<< HEAD
      * Display the user's profile form.
      */
     public function edit(Request $request): View
@@ -57,4 +63,18 @@ class ProfileController extends Controller
 
         return Redirect::to('/');
     }
+=======
+     * Display the project report dashboard.
+     */
+    public function edit(Request $request): View
+    {
+        // Fetch projects data. Replace this with your actual data fetching logic.
+        $projects = Project::all(); 
+        
+        return view('employee.project-report', [
+            'user' => $request->user(),
+            'projects' => $projects,
+        ]);
+    }
+>>>>>>> remoterepo/main
 }

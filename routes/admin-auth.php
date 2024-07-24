@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Admin\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\Admin\ProfileController;
+<<<<<<< HEAD
 use App\Http\Controllers\Admin\Auth\AllemployeesController;
 use App\Http\Controllers\Admin\Auth\employeeslistController;
 use App\Http\Controllers\Admin\Auth\AttendenceController;
@@ -24,6 +25,11 @@ Route::middleware('guest:admin')->prefix('admin')->name('admin.')->group(functio
 
 
 
+=======
+use Illuminate\Support\Facades\Route;
+
+Route::middleware('guest:admin')->prefix('admin')->name('admin.')->group(function () {
+>>>>>>> remoterepo/main
     Route::get('register', [RegisteredUserController::class, 'create'])
                 ->name('register');
 
@@ -38,6 +44,7 @@ Route::middleware('guest:admin')->prefix('admin')->name('admin.')->group(functio
 });
 
 Route::middleware('auth:admin')->prefix('admin')->name('admin.')->group(function () {
+<<<<<<< HEAD
       
     Route::get('employeeslist', [employeeslistController::class, 'employeeListing'])->name('employeeslist');
 
@@ -76,6 +83,17 @@ Route::middleware('auth:admin')->prefix('admin')->name('admin.')->group(function
         Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
         Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
         
+=======
+    Route::get('/dashboard', function () {
+        return view('admin.dashboard');
+    })->middleware(['auth', 'verified'])->name('dashboard');
+    
+ 
+        Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+        Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+        Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+>>>>>>> remoterepo/main
 
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->name('logout');

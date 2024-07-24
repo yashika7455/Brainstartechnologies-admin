@@ -18,11 +18,15 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
+<<<<<<< HEAD
         'employee_id',
         'phone_number',
         'department',
         'designation',
         'firstname',
+=======
+        'name',
+>>>>>>> remoterepo/main
         'email',
         'password',
     ];

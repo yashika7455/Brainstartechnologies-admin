@@ -1,5 +1,8 @@
 <?php
+<<<<<<< HEAD
 use App\Http\Controllers\Admin\Auth\EmployeeController;
+=======
+>>>>>>> remoterepo/main
 
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\ConfirmablePasswordController;
@@ -10,8 +13,21 @@ use App\Http\Controllers\Auth\PasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Route;
 
+=======
+use App\Http\Controllers\Employee\AttendanceController;
+use App\Http\Controllers\Employee\Applyleavescontroller;
+use App\Http\Controllers\Employee\ProjectReportController;
+use App\Http\Controllers\Employee\Salarystatuscontroller;
+use App\Http\Controllers\Employee\Holidayscontroller;
+use App\Http\Controllers\EmployeeleaveController;
+use App\Http\Controllers\LeaveController;
+use Illuminate\Support\Facades\Route;
+
+
+>>>>>>> remoterepo/main
 Route::middleware('guest')->group(function () {
     Route::get('register', [RegisteredUserController::class, 'create'])
                 ->name('register');
@@ -58,6 +74,22 @@ Route::middleware('auth')->group(function () {
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->name('logout');
 });
+<<<<<<< HEAD
 
 
 Route::post('admin/company/store', [EmployeeController::class, 'store'])->name('admin.company.store');
+=======
+Route::prefix('employee')->group(function () {
+Route::get('holidays', [Holidayscontroller::class, 'holidays'])->name('employee.holidays');
+Route::get('/applyleaves', [EmployeeleaveController::class, 'create'])->name('employee.applyleaves');
+Route::post('/leave/store', [EmployeeleaveController::class, 'store'])->name('leave.store');
+Route::get('/salarystatus', [Salarystatuscontroller::class, 'salarystatus']);
+Route::get('/attendance', [AttendanceController::class, 'index'])->name('attendance.index');
+Route::post('/attendance/punch-in', [AttendanceController::class, 'punchIn'])->name('attendance.punch-in');
+Route::post('/attendance/punch-out', [AttendanceController::class, 'punchOut'])->name('attendance.punch-out');
+Route::get('/attendance/break-in', [AttendanceController::class, 'breakIn'])->name('attendance.break-in');
+Route::get('/attendance/break-out', [AttendanceController::class, 'breakOut'])->name('attendance.break-out');
+Route::get('/project-report', [ProjectReportController::class, 'index'])->name('project-report');
+Route::post('/daily-status', [ProjectReportController::class, 'store'])->name('daily_status.store');
+});
+>>>>>>> remoterepo/main
