@@ -1,0 +1,119 @@
+.col-md-3 {
+    flex: 0 0 auto;
+    width: 25%;
+}
+.stats-info {
+    background-color: #fff;
+    border: 1px solid #e9e9ea;
+    text-align: center;
+    border-radius: 4px;
+    margin: 0 0 20px;
+    padding: 15px;
+}
+.w-100 {
+    width: 100% !important;
+}
+.stats-info h6 {
+    color: #212529;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 5px;
+}
+.stats-info h4 {
+    font-size: 24px;
+    margin-bottom: 0;
+}
+@media (min-width: 1200px) {
+    .col-xl-2 {
+        flex: 0 0 auto;
+        width: 16.66666667%;
+    }
+}
+.form-focus .form-control {
+    height: 50px;
+    padding: 21px 12px 6px;
+}
+.form-control {
+    border-color: #d3d3d4;
+    border-radius: 5px;
+    box-shadow: none;
+    font-size: 14px;
+    color: #4d5154;
+    height: 44px;
+    line-height: 2;
+}
+/* .form-focus .cal-icon:after {
+    top: 15px;
+}
+.cal-icon:after {
+    color: #909294;
+    content: "\f073";
+    display: block;
+    font-family: fontawesome;
+    font-size: 15px;
+    margin: auto;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+} */
+.input-leave{
+    background: white;
+    border:2px solid #e8e8ea;
+    border-radius: 5px;
+}
+.input-leave select{
+    border:none;
+    outline:none;
+}
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+    --bs-table-color-type:black;
+    --bs-table-bg-type: white;
+}
+.custom-table td {
+    padding: 10px 20px;
+}
+.table td {
+    border-top: 1px solid #e9e9ea;
+    white-space: nowrap;
+    vertical-align: middle;
+    padding: 0.5rem;
+    font-size: 14px;
+}
+.dropdown, .dropdown-center, .dropend, .dropstart, .dropup, .dropup-center {
+    position: relative;
+}
+table td .dropdown.action-label a.btn-rounded.dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+.text-purple {
+    color: #9368e9 !important;
+}
+.fa-regular, .far {
+    font-weight: 400;
+}
+.fa-circle-dot:before, .fa-dot-circle:before {
+    content: "\f192";
+}
+a.btn-rounded.dropdown-toggle::after {
+    margin-left: 0;
+}
+
+.text-info {
+    color: #009efb !important;
+}
+.text-success {
+    color: #36ba45 !important;
+}
+table td .dropdown.action-label a.btn-rounded.dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 10px;
+    border: 2px solid #f2eeee;
+}
+.label-date{
+    margin-top:-9px;
+}
